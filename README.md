@@ -1,6 +1,50 @@
-# Shopping
+# E-commerce
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+This project  is marketing and characterized by speed, flexibility and easy to use.
+Get products form  `JSON Server`
+Add products selected to sessionStorage. 
+
+## to run project install
+- npm install
+- bootstrap: ^5.3.1,
+- Node v16.16.0
+- json-server --watch db.json
+
+## Project modules,components,interfaces,Guard,customPipe,services and files.ts
+# Core modules 
+  - NavBar
+  - Interceptors
+
+
+# Screens modules 
+  - Login module
+  - Product list module
+  - Shopping cart module
+  - Checkout module
+  - Success module
+
+  # Shared modules 
+  - Product Card
+  
+
+ # Services 
+  - Auth Service
+  - ProductList Service
+  - Auth Guard
+    
+# Interfaces 
+  - IProduct
+  - IUser
+
+
+##  Stacks
+
+-Html5
+-Sass 
+-Bootstrap v5
+-Typescript 
+-Angular
+
 
 ## Development server
 
