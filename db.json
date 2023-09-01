@@ -1,0 +1,101 @@
+{
+  "products":[
+    {
+      "id":1,
+      "productName": "Classic jacket",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "price": 300 ,
+      "productImg" :"../assets/jacket.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":2,
+      "productName": "Mens Casual Premium Slim Fit T-Shirts",
+      "description": "Slim-fitting style, contrast raglan long sleeve",
+      "price": 100 ,
+      "productImg" :"../assets/1.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":3,
+      "productName": "Mens Cotton ",
+      "description": "great outerwear T-shirt for Spring/Autumn/Winter",
+      "price": 150 ,
+      "productImg" :"../assets/2.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":4,
+      "productName": "T-shirt",
+      "description": "John Hardy Women's Legends Naga ",
+      "price": 125 ,
+      "productImg" :"../assets/3.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":5,
+      "productName": "White Gold Plated Princess",
+      "description": "Classic Created Wedding Engagement Solitaire Diamond",
+      "price": 95 ,
+      "productImg" :"../assets/4.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":6,
+      "productName": "shirt",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "price": 80 ,
+      "productImg" :"../assets/5.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":7,
+      "productName": "Classic shirt",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "price": 60 ,
+      "productImg" :"../assets/6.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":8,
+      "productName": "Classic shirt",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "price": 140 ,
+      "productImg" :"../assets/7.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":9,
+      "productName": "Classic shirt",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "price": 130 ,
+      "productImg" :"../assets/8.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":10,
+      "productName": "Classic shirt",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "price": 190 ,
+      "productImg" :"../assets/9.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":11,
+      "productName": "Cap",
+      "description": "Your perfect cap for everyday use and walks in the forest",
+      "price": 500 ,
+      "productImg" :"../assets/10.jpg",
+      "category":"clothess"
+    },
+    {
+      "id":12,
+      "productName": "Classic shirt",
+      "description": "Your perfect pack for everyday use and walks in the forest",
+      "price": 110 ,
+      "productImg" :"../assets/11.jpg",
+      "category":"clothess"
+    }
+  ]
+}
+

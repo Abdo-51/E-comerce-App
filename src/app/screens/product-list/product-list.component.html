@@ -1,0 +1,22 @@
+<section class="mt-5">
+  <div class="header-inputs d-flex justify-content-center align-items-baseline gap-3">
+    <input class="form-control w-50" type="text" [(ngModel)]="productName" placeholder="Search Here ...">
+    <p class="choose">Choose Category :</p>
+    <select  #term="ngModel" ngModel >
+      <option [value]="-1" selected disabled>Choose</option>
+      <option [value]="item.key"  *ngFor="let item of productCategory | keyvalue">{{item.key}}</option>
+    </select>
+
+
+  </div>
+  <div class="row my-4">
+    <div class="col-md-3 d-flex justify-content-center my-5" *ngFor="let product of productList |categoryFilter:term.value|productNameFilter:productName">
+      <app-product-card [product]="product"></app-product-card>
+    </div>
+  </div>
+</section>
+<mat-paginator [length]="12" #paginator
+              [pageSize]="5"
+              [pageSizeOptions]="[5, 10, 12]"
+              showFirstLastButtons>
+</mat-paginator>

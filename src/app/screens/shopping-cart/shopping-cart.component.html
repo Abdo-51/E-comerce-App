@@ -1,0 +1,97 @@
+<!-- <section class="my-5">
+ <div class="row">
+  <div class="col-md-3" *ngFor="let product of productsSelected | keyvalue">
+    <div class="card" style="width: 18rem;">
+      <div class="d-flex justify-content-center p-4">
+        <img class="card-img-top" width="220" height="240" [src]="product.value.product.image" alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{product.value.product.title}}</h5>
+        <p class="card-text overflow-hidden">{{product.value.product.description}}</p>
+        <hr>
+        <div class="d-flex justify-content-between align-items-baseline">
+          <p>{{product.value.product.price}} EGP</p>
+          <span>Count : <button (click)="decrement(+product.key)" class="btn-count btn btn-secondary">-</button>{{product.value.count}}
+            <button (click)="increment(+product.key)" class="btn-count btn btn-secondary">+</button></span>
+
+        </div>
+        <div class="w-100">
+          <button (click)="removeProduct(+product.key)" class="btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ </div>
+</section> -->
+
+
+<!-- now -->
+
+<main>
+  <div  class="basket">
+
+    <div  class="basket-labels">
+      <ul>
+        <li class="item item-heading">Item</li>
+        <li class="price">Price</li>
+        <li class="quantity">Quantity</li>
+        <li class="subtotal">Subtotal</li>
+      </ul>
+    </div>
+    <div class="basket-product" *ngFor="let product of productsSelected | keyvalue">
+
+      <div  class="item">
+        <div class="product-image">
+          <img [src]="product.value.product.productImg" alt="Placholder Image 2" class="product-frame">
+        </div>
+        <div class="product-details">
+          <h1>{{product.value.product.productName}}</h1>
+          <p>{{product.value.product.description}}</p>
+        </div>
+      </div>
+      <div class="price">{{product.value.product.price}} </div>
+      <div class="quantity">
+        <span class="d-flex justify-content-center align-items-center">
+          <button (click)="decrement(+product.key)" class="btn-count btn btn-secondary d-flex justify-content-center align-items-center">-</button>
+          <span class="fs-6 mx-2">{{product.value.count}}</span>
+          <button (click)="increment(+product.key)" class="btn-count btn btn-secondary d-flex justify-content-center align-items-center">+</button>
+        </span>
+      </div>
+      <div class="subtotal">{{product.value.product.price*product.value.count}}</div>
+      <div class="remove">
+        <button class="btn btn-danger" (click)="removeProduct(+product.key)">Remove</button>
+      </div>
+    </div>
+
+  </div>
+  <aside>
+    <div class="summary">
+      <div class="summary-subtotal">
+        <div class="subtotal-title">Subtotal</div>
+        <div class="subtotal-value final-value" id="basket-subtotal">{{totalPrice}}</div>
+        <div class="summary-promo hide">
+          <div class="promo-title">Promotion</div>
+          <div class="promo-value final-value" id="basket-promo"></div>
+        </div>
+      </div>
+      <div class="summary-delivery">
+        <select name="delivery-collection" class="summary-delivery-selection">
+          <option value="0" selected="selected">Select Collection or Delivery</option>
+          <option value="collection">Collection</option>
+          <option value="first-class">Royal Mail 1st Class</option>
+          <option value="second-class">Royal Mail 2nd Class</option>
+          <option value="signed-for">Royal Mail Special Delivery</option>
+        </select>
+      </div>
+      <div class="summary-total">
+        <div class="total-title">Total</div>
+        <div class="total-value final-value" id="basket-total">{{totalPrice}}</div>
+      </div>
+      <div class="summary-checkout">
+        <button  [ngClass]="productsSelected.length > 0 ? 'summary-checkout':'not-summary-checkout'"
+        [routerLink]="productsSelected ?'/checkout':'/shoppingCart'" class="checkout-cta">Go to Secure Checkout</button>
+      </div>
+    </div>
+  </aside>
+</main>

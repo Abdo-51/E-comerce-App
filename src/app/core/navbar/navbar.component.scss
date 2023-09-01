@@ -1,0 +1,25 @@
+.navbar
+{
+  .btn-cart:hover
+  {
+    color: yellow !important;
+  }
+  .p-badge-danger
+  {
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    background-color: rgb(209, 50, 50);
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+  }
+  .nav-item
+  {
+    cursor: pointer;
+  }
+}
