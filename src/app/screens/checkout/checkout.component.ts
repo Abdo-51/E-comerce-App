@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ProducListService } from 'src/app/services/product-list.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class CheckoutComponent {
   checkoutForm!: FormGroup
   count:number =0
   totalPrice:number =0
-  constructor(private fb:FormBuilder,private _ProductService: ProducListService)
+  constructor(private fb:FormBuilder,private _ProductService: ProducListService,private router:Router)
   {
     this.checkoutForm =this.fb.group({
       ['fName']:['',[Validators.required ,Validators.minLength(3),Validators.maxLength(20)]],
@@ -39,6 +40,10 @@ export class CheckoutComponent {
 
   checkout()
   {
-    this._ProductService.checkout()
+    if (this.checkoutForm.valid) {
+
+      this._ProductService.checkout()
+      this.router.navigate(["/success"])
+    }
   }
 }

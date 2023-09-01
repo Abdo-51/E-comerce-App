@@ -1,92 +1,3 @@
-<!-- <section >
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form [formGroup]="checkoutForm">
-
-        <div class="row">
-          <div class="col-50">
-            <h3>Billing Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" formControlName="fullName" placeholder="John M. Doe"><br>
-            <div *ngIf="checkoutForm.get('fullName')?.invalid &&checkoutForm.get('fullName')?.touched">
-              <small class="text-danger"*ngIf=" checkoutForm.get('fullName')?.hasError('required')">First name is Required</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('fullName')?.hasError('minlength')">First name is min 3 character</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('fullName')?.hasError('maxlength')">First name is max 20 character</small>
-            </div>
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" formControlName="email" placeholder="john@example.com"><br>
-            <div *ngIf="checkoutForm.get('email')?.invalid &&checkoutForm.get('email')?.touched">
-              <small class="text-danger"*ngIf=" checkoutForm.get('email')?.hasError('required')">E-mail is Required</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('email')?.hasError('email')">E-mail is Invalid</small>
-            </div>
-            <label for="adr"><i class="fa-solid fa-address-book"></i> Address</label>
-            <input type="text" id="adr" name="address" formControlName="Adddress" placeholder="542 W. 15th Street"><br>
-            <div *ngIf="checkoutForm.get('Adddress')?.invalid &&checkoutForm.get('Adddress')?.touched">
-              <small class="text-danger"*ngIf=" checkoutForm.get('Adddress')?.hasError('required')">Address is Required</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('Adddress')?.hasError('minlength')">Address is min 3 character</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('Adddress')?.hasError('maxlength')">Address is max 20 character</small>
-            </div>
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" formControlName="city" placeholder="New York"><br>
-            <div *ngIf="checkoutForm.get('city')?.invalid &&checkoutForm.get('city')?.touched">
-              <small class="text-danger"*ngIf=" checkoutForm.get('city')?.hasError('required')">city is Required</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('city')?.hasError('minlength')">city is min 3 character</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('city')?.hasError('maxlength')">city is max 10 character</small>
-            </div>
-
-          </div>
-
-          <div class="col-50">
-            <h3>Payment</h3>
-            <label for="fname">Accepted Cards</label>
-            <div class="icon-container">
-              <i class="fa-brands fa-cc-visa mx-2" style="color:navy;"></i>
-              <i class="fa-brands fa-paypal mx-2" style="color:blue;"></i>
-              <i class="fa-brands fa-cc-mastercard mx-2" style="color:red;"></i>
-              <i class="fa-brands fa-cc-discover mx-2" style="color:orange;"></i>
-            </div>
-            <label for="cname">Name on Card</label>
-            <input type="text" id="cname" formControlName="cardName" name="cardname" placeholder="John More Doe"><br>
-            <div *ngIf="checkoutForm.get('cardName')?.invalid &&checkoutForm.get('cardName')?.touched">
-              <small class="text-danger"*ngIf=" checkoutForm.get('cardName')?.hasError('required')">card Name is Required</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('cardName')?.hasError('minlength')">card Name is min 3 character</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('cardName')?.hasError('maxlength')">card Name is max 15 character</small>
-            </div>
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" formControlName="cardNumber" name="cardnumber" placeholder="111444499647"><br>
-            <div *ngIf="checkoutForm.get('cardNumber')?.invalid &&checkoutForm.get('cardNumber')?.touched">
-              <small class="text-danger"*ngIf=" checkoutForm.get('cardNumber')?.hasError('required')">card Number is Required</small>
-              <small class="text-danger" *ngIf=" checkoutForm.get('cardNumber')?.hasError('pattern')">card Number is should be 12 numbers</small>
-            </div>
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" formControlName="expMonth" placeholder="September"><br>
-            <div *ngIf="checkoutForm.get('expMonth')?.invalid &&checkoutForm.get('expMonth')?.touched">
-              <small class="text-danger"*ngIf=" checkoutForm.get('expMonth')?.hasError('required')">Expire Month is Required</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('expMonth')?.hasError('minlength')">Expire Month is min 3 character</small>
-                <small class="text-danger" *ngIf=" checkoutForm.get('expMonth')?.hasError('maxlength')">Expire Month is max 12 character</small>
-            </div>
-          </div>
-
-        </div>
-        <label>
-          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-        </label>
-        <input (click)="checkout()" type="submit" [disabled]="checkoutForm.invalid" value="Continue to checkout" [routerLink]="checkoutForm.valid ? '/success':'/checkout'" class="btn">
-      </form>
-    </div>
-  </div>
-  <div class="col-25">
-    <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>{{count}}</b></span></h4>
-
-      <hr>
-      <p>Total <span class="price" style="color:black"><b> {{totalPrice}} EGP</b></span></p>
-    </div>
-  </div>
-</div>
-
-</section> -->
 <div class="wrapper">
   <div class="container">
       <form [formGroup]="checkoutForm">
@@ -182,7 +93,7 @@
               </div>
           </div>
           <div class="btns d-flex justify-content-between align-items-baseline gap-2">
-              <button routerLink="/success">Purchase</button>
+              <button  (click)="checkout()">Purchase</button>
               <button routerLink="/cart">Back to cart</button>
           </div>
       </form>

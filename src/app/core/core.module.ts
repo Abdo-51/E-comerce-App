@@ -22,8 +22,7 @@ import { SharedModule } from '../shared/shared.module';
     HttpClientModule,
   ],
   providers:[
-    // { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true },
   ]
 
 })
